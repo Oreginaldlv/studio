@@ -1,0 +1,86 @@
+import { Shirt, Music, Video, Rss } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
+import Image from 'next/image';
+
+export default function VboyEmpirePage() {
+  return (
+    <div className="container mx-auto px-4 py-12">
+      <div className="mx-auto max-w-3xl text-center">
+        <Shirt className="mx-auto h-12 w-12 text-primary" />
+        <h1 className="mt-4 font-headline text-4xl font-bold tracking-tighter sm:text-5xl">
+          VBoy Empire
+        </h1>
+        <p className="mt-4 text-muted-foreground md:text-xl">
+          A multi-faceted venture focusing on entertainment and fan engagement, from exclusive merch to pay-per-view content.
+        </p>
+      </div>
+
+       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
+        <FeatureCard
+          icon={<Shirt className="h-8 w-8 text-primary" />}
+          title="Merch Store"
+          description="Exclusive Empire merchandise with a limited drop strategy."
+        />
+        <FeatureCard
+          icon={<Music className="h-8 w-8 text-primary" />}
+          title="Music Downloads"
+          description="Preview and purchase music tracks with Stripe checkout."
+        />
+        <FeatureCard
+          icon={<Video className="h-8 w-8 text-primary" />}
+          title="Exclusive Videos"
+          description="Pay-per-view or subscription video library with behind-the-scenes content."
+        />
+         <FeatureCard
+          icon={<Rss className="h-8 w-8 text-primary" />}
+          title="Blog/Vlog"
+          description="Regularly updated content with user engagement features."
+        />
+      </div>
+      
+      <div className="mt-20">
+        <h2 className="text-center font-headline text-3xl font-bold mb-8">Latest Drops</h2>
+        <div className="grid md:grid-cols-3 gap-8">
+            <ProductCard image="https://placehold.co/600x600.png" dataAiHint="blue hoodie" name="Empire Hoodie" price="$79.99" />
+            <ProductCard image="https://placehold.co/600x600.png" dataAiHint="black t-shirt" name="VBoy Tee" price="$34.99" />
+            <ProductCard image="https://placehold.co/600x600.png" dataAiHint="white cap" name="Empire Cap" price="$29.99" />
+        </div>
+      </div>
+
+    </div>
+  );
+}
+
+function FeatureCard({ icon, title, description }: { icon: React.ReactNode, title: string, description: string }) {
+  return (
+    <Card className="text-center">
+      <CardHeader>
+        <div className="mx-auto bg-primary/10 p-4 rounded-full w-fit">
+          {icon}
+        </div>
+        <CardTitle>{title}</CardTitle>
+      </CardHeader>
+      <CardContent>
+        <CardDescription>{description}</CardDescription>
+      </CardContent>
+    </Card>
+  );
+}
+
+function ProductCard({ image, dataAiHint, name, price }: { image: string, dataAiHint: string, name: string, price: string }) {
+    return (
+        <Card className="overflow-hidden group">
+            <CardContent className="p-0">
+                <Image src={image} alt={name} width={600} height={600} className="object-cover w-full h-auto aspect-square group-hover:scale-105 transition-transform duration-300" data-ai-hint={dataAiHint} />
+            </CardContent>
+            <CardHeader>
+                <CardTitle>{name}</CardTitle>
+                <div className="flex justify-between items-center">
+                    <p className="text-lg font-semibold">{price}</p>
+                    <Button>Add to Cart</Button>
+                </div>
+            </CardHeader>
+        </Card>
+    );
+}
