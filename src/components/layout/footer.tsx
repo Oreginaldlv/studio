@@ -11,7 +11,7 @@ export default function Footer() {
             <Logo />
           </div>
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Empire Hub. All rights reserved.
+            © {new Date().getFullYear()} Oreginald Inc. All rights reserved.
           </p>
           <div className="flex items-center gap-4">
             <Link href="#" aria-label="Twitter">

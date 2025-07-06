@@ -16,15 +16,13 @@ import Autoplay from 'embla-carousel-autoplay';
 
 const ventures = [
   {
-    name: 'Credit Empire',
+    name: 'Oreginald Credit',
     title: 'Credit Repair SaaS',
     tagline: 'Rebuild your credit, reshape your future.',
     href: '/credit-repair',
     Icon: CreditCard,
     image: 'https://placehold.co/1200x800.png',
     dataAiHint: 'finance abstract',
-    accentColor: 'text-blue-400',
-    bgColor: 'bg-blue-900/20',
   },
   {
     name: 'VBoy Empire',
@@ -34,8 +32,6 @@ const ventures = [
     Icon: Shirt,
     image: 'https://placehold.co/1200x800.png',
     dataAiHint: 'music concert',
-    accentColor: 'text-purple-400',
-    bgColor: 'bg-purple-900/20',
   },
   {
     name: 'LeadLoop CRM',
@@ -45,30 +41,24 @@ const ventures = [
     Icon: Users,
     image: 'https://placehold.co/1200x800.png',
     dataAiHint: 'business network',
-    accentColor: 'text-green-400',
-    bgColor: 'bg-green-900/20',
   },
   {
-    name: 'Motion AI',
+    name: 'NMotion AI',
     title: 'AI Video Generator',
     tagline: 'Create stunning videos from simple ideas.',
     href: '/video-generator',
     Icon: Film,
     image: 'https://placehold.co/1200x800.png',
     dataAiHint: 'abstract motion',
-    accentColor: 'text-red-400',
-    bgColor: 'bg-red-900/20',
   },
   {
-    name: 'AI Business Builder',
+    name: 'Oreginald Business Builder',
     title: 'AI Business Builder',
     tagline: 'Your AI co-founder for launching a new venture.',
     href: '/business-builder',
     Icon: Rocket,
     image: 'https://placehold.co/1200x800.png',
     dataAiHint: 'startup rocket',
-    accentColor: 'text-yellow-400',
-    bgColor: 'bg-yellow-900/20',
   },
 ];
 
@@ -77,10 +67,10 @@ export default function Home() {
     <div className="flex flex-col items-center justify-center space-y-12 md:space-y-20 py-12 md:py-24">
       <section className="container mx-auto px-4 text-center">
         <h1 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
-          The Future is Our Empire
+          The Oreginald Dynasty
         </h1>
         <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed mt-4">
-          Welcome to the Empire Hub. A collective of modern ventures, each a
+          Welcome to Oreginald Inc. A collective of modern ventures, each a
           mini-business under one brand, unified by a consistent aesthetic and a
           seamless user experience designed to exude glamour and excellence.
         </p>
@@ -117,8 +107,8 @@ export default function Home() {
                       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent" />
                       <div className="absolute bottom-0 left-0 p-6 text-white w-full">
                         <div className="flex items-center gap-4">
-                           <div className={`p-2 rounded-lg ${venture.bgColor}`}>
-                             <venture.Icon className={`w-8 h-8 ${venture.accentColor}`} />
+                           <div className='p-2 rounded-lg bg-primary/20'>
+                             <venture.Icon className='w-8 h-8 text-primary' />
                            </div>
                            <div>
                             <h2 className="font-headline text-2xl font-bold">

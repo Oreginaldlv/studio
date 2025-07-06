@@ -18,9 +18,9 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: 'Empire Hub',
+  title: 'Oreginald Inc.',
   description:
-    'The unified digital hub for all Empire ventures. Glamour, excellence, and futuristic innovation.',
+    'The unified digital hub for all Oreginald Inc. ventures. Ancient royalty meets futuristic innovation.',
 };
 
 export default function RootLayout({
@@ -32,7 +32,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body
         className={cn(
-          'dark font-body antialiased',
+          'font-body antialiased',
           inter.variable,
           spaceGrotesk.variable
         )}

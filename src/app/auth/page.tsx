@@ -58,7 +58,7 @@ export default function AuthPage() {
                </div>
               <CardTitle className="font-headline">Create an Account</CardTitle>
               <CardDescription>
-                Join the Empire. Get started in seconds.
+                Join the Oreginald Dynasty. Get started in seconds.
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">

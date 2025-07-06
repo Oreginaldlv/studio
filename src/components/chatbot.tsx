@@ -30,20 +30,20 @@ export function Chatbot() {
       <Sheet open={isOpen} onOpenChange={setIsOpen}>
         <SheetContent className="flex flex-col">
           <SheetHeader>
-            <SheetTitle>Empire Assistant</SheetTitle>
+            <SheetTitle>Oreginald Assistant</SheetTitle>
             <SheetDescription>
-              Your AI-powered guide to the Empire. How can I help you today?
+              Your AI-powered guide to the Oreginald Dynasty. How can I help you today?
             </SheetDescription>
           </SheetHeader>
           <ScrollArea className="flex-1 my-4 p-4 bg-muted/50 rounded-lg">
             <div className="space-y-4">
               <div className="flex items-start gap-3">
                 <Avatar>
-                  <AvatarFallback>EA</AvatarFallback>
+                  <AvatarFallback>OA</AvatarFallback>
                 </Avatar>
                 <div className="bg-background p-3 rounded-lg max-w-[80%]">
                   <p className="text-sm">
-                    Welcome to Empire Hub! I can help you navigate our ventures.
+                    Welcome to Oreginald Inc.! I can help you navigate our ventures.
                     What are you looking for?
                   </p>
                 </div>

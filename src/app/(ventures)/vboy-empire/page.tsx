@@ -12,7 +12,7 @@ export default function VboyEmpirePage() {
           VBoy Empire
         </h1>
         <p className="mt-4 text-muted-foreground md:text-xl">
-          A multi-faceted venture focusing on entertainment and fan engagement, from exclusive merch to pay-per-view content.
+          A multi-faceted entertainment brand focusing on music, merch, and exclusive content.
         </p>
       </div>
 
@@ -42,9 +42,9 @@ export default function VboyEmpirePage() {
       <div className="mt-20">
         <h2 className="text-center font-headline text-3xl font-bold mb-8">Latest Drops</h2>
         <div className="grid md:grid-cols-3 gap-8">
-            <ProductCard image="https://placehold.co/600x600.png" dataAiHint="blue hoodie" name="Empire Hoodie" price="$79.99" />
+            <ProductCard image="https://placehold.co/600x600.png" dataAiHint="gold hoodie" name="Empire Hoodie" price="$79.99" />
             <ProductCard image="https://placehold.co/600x600.png" dataAiHint="black t-shirt" name="VBoy Tee" price="$34.99" />
-            <ProductCard image="https://placehold.co/600x600.png" dataAiHint="white cap" name="Empire Cap" price="$29.99" />
+            <ProductCard image="https://placehold.co/600x600.png" dataAiHint="gold cap" name="Empire Cap" price="$29.99" />
         </div>
       </div>
 

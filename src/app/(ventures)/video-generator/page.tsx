@@ -8,7 +8,7 @@ export default function VideoGeneratorPage() {
       <div className="mx-auto max-w-3xl text-center">
         <Film className="mx-auto h-12 w-12 text-primary" />
         <h1 className="mt-4 font-headline text-4xl font-bold tracking-tighter sm:text-5xl">
-          Motion AI Video Generator
+          NMotion AI Video Generator
         </h1>
         <p className="mt-4 text-muted-foreground md:text-xl">
           A creative platform for generating AI-powered videos. Enter an idea, and we'll handle the script, voiceover, and visuals.
