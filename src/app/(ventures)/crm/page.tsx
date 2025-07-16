@@ -1,12 +1,19 @@
+
+'use client';
+
+import { useState } from 'react';
 import { Users, Mail, Table } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import Link from 'next/link';
+import { CrmSignupForm } from './crm-signup-form';
 
 
 export default function CrmPage() {
+  const [isFormOpen, setIsFormOpen] = useState(false);
+
   return (
     <div className="container mx-auto px-4 py-12">
+      <CrmSignupForm open={isFormOpen} onOpenChange={setIsFormOpen} />
       <div className="mx-auto max-w-3xl text-center">
         <Users className="mx-auto h-12 w-12 text-primary" />
         <h1 className="mt-4 font-headline text-4xl font-bold tracking-tighter sm:text-5xl">
@@ -36,8 +43,8 @@ export default function CrmPage() {
       </div>
 
       <div className="mt-12 text-center">
-        <Button size="lg" asChild>
-          <Link href="/crm/signup">Start Organizing</Link>
+        <Button size="lg" onClick={() => setIsFormOpen(true)}>
+          Start Organizing
         </Button>
       </div>
     </div>
