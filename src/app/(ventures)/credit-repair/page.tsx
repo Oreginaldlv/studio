@@ -16,14 +16,14 @@ export default function CreditRepairPage() {
       className="relative bg-cover bg-center bg-no-repeat py-12"
       style={{
         backgroundImage:
-          "url('https://storage.googleapis.com/firebase-studio-users/user-lQ3FpucD3f1iGDsWbZq3/images/clvklq4d40003m80pi255aeo5.png')",
+          "url('https://storage.googleapis.com/firebase-studio-users/user-lQ3FpucD3f1iGDsWbZq3/images/clvkpdsy70002m80p4jhf51r0.png')",
       }}
     >
       <div className="absolute inset-0 bg-background/80 backdrop-blur-sm" />
       <div className="relative z-10 container mx-auto px-4">
         <div className="mx-auto max-w-3xl text-center">
           <Image
-            src="https://storage.googleapis.com/firebase-studio-users/user-lQ3FpucD3f1iGDsWbZq3/images/clvklq4d30002m80pehqy5979.png"
+            src="https://storage.googleapis.com/firebase-studio-users/user-lQ3FpucD3f1iGDsWbZq3/images/clvkpdsmf0001m80pgvpehkxd.png"
             alt="Oreginald Credit Partners Logo"
             width={200}
             height={200}
