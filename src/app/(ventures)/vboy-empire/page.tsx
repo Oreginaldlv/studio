@@ -1,3 +1,4 @@
+
 import { Shirt, Music, Video, Rss } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
@@ -51,7 +52,7 @@ export default function VboyEmpirePage() {
         <div className="grid md:grid-cols-3 gap-8">
             <ProductCard image="/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Ffirebase-studio-users%2Fuser-lQ3FpucD3f1iGDsWbZq3%2Fimages%2Fclvgd8g0w0002m80p4u7v1tav.png&w=1080&q=75" dataAiHint="album cover" name="What They Hatin' Fo?" price="$9.99" />
             <ProductCard image="/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Ffirebase-studio-users%2Fuser-lQ3FpucD3f1iGDsWbZq3%2Fimages%2Fclvgsdcrk0004m80pdqj9d0de.png&w=1080&q=75" dataAiHint="album cover" name="Mack or Die" price="$9.99" />
-            <ProductCard image="https://placehold.co/600x600.png" dataAiHint="gold cap" name="Empire Cap" price="$29.99" />
+            <ProductCard image="/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Ffirebase-studio-users%2Fuser-lQ3FpucD3f1iGDsWbZq3%2Fimages%2Fclvh2q8c40006m80p4g7e9h0f.png&w=1080&q=75" dataAiHint="album cover" name="On The Gritty & Grind" price="$9.99" />
         </div>
       </div>
 
