@@ -5,6 +5,7 @@ import { Rocket } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useState } from 'react';
 import { BusinessPlanForm } from './business-plan-form';
+import { Dialog } from '@/components/ui/dialog';
 
 export default function BusinessBuilderPage() {
   const [isFormOpen, setIsFormOpen] = useState(false);
@@ -36,7 +37,9 @@ export default function BusinessBuilderPage() {
         </div>
       </div>
        <div className="mx-auto mt-12 max-w-4xl px-4">
-        {isFormOpen && <BusinessPlanForm />}
+        <Dialog open={isFormOpen} onOpenChange={setIsFormOpen}>
+          <BusinessPlanForm />
+        </Dialog>
       </div>
     </div>
   );

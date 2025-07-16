@@ -17,6 +17,7 @@ export default function VideoGeneratorPage() {
         backgroundImage: "url('https://placehold.co/1920x1080.png')",
       }}
     >
+      <VideoGeneratorSignupForm open={isFormOpen} onOpenChange={setIsFormOpen} />
       <div className="absolute inset-0 bg-background/80 backdrop-blur-sm" />
       <div className="relative z-10 container mx-auto px-4">
         <div className="mx-auto max-w-3xl text-center">
@@ -51,10 +52,6 @@ export default function VideoGeneratorPage() {
           <Button size="lg" onClick={() => setIsFormOpen(true)}>
             Create Your Video
           </Button>
-        </div>
-        
-        <div className="mx-auto mt-12 max-w-4xl">
-          {isFormOpen && <VideoGeneratorSignupForm />}
         </div>
       </div>
     </div>

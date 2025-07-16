@@ -1,5 +1,7 @@
 import { BusinessPlanForm } from '@/app/(ventures)/business-builder/business-plan-form';
 import { Rocket } from 'lucide-react';
+import { Dialog } from '@/components/ui/dialog';
+
 
 export default function BusinessBuilderSignupPage() {
   return (
@@ -14,7 +16,9 @@ export default function BusinessBuilderSignupPage() {
         </p>
       </div>
       <div className="mx-auto mt-12 max-w-4xl">
-        <BusinessPlanForm />
+        <Dialog open={true}>
+          <BusinessPlanForm />
+        </Dialog>
       </div>
     </div>
   );
