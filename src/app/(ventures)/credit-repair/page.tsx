@@ -1,3 +1,7 @@
+
+'use client';
+
+import { useState } from 'react';
 import { CreditCard, Upload, History, DollarSign } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
@@ -7,23 +11,26 @@ import {
   CardTitle,
   CardDescription,
 } from '@/components/ui/card';
-import Link from 'next/link';
 import Image from 'next/image';
+import { CreditRepairSignupForm } from './credit-repair-signup-form';
 
 export default function CreditRepairPage() {
+  const [isFormOpen, setIsFormOpen] = useState(false);
+
   return (
     <div
       className="relative bg-cover bg-center bg-no-repeat py-12"
       style={{
         backgroundImage:
-          "url('https://storage.googleapis.com/firebase-studio-users/user-lQ3FpucD3f1iGDsWbZq3/images/clvkpdsy70002m80p4jhf51r0.png')",
+          "url('https://storage.googleapis.com/firebase-studio-users/user-lQ3FpucD3f1iGDsWbZq3/images/clvj09n3t0002m80p4szn4nfz.png')",
       }}
     >
+      <CreditRepairSignupForm open={isFormOpen} onOpenChange={setIsFormOpen} />
       <div className="absolute inset-0 bg-background/80 backdrop-blur-sm" />
       <div className="relative z-10 container mx-auto px-4">
         <div className="mx-auto max-w-3xl text-center">
           <Image
-            src="https://storage.googleapis.com/firebase-studio-users/user-lQ3FpucD3f1iGDsWbZq3/images/clvkpdsmf0001m80pgvpehkxd.png"
+            src="https://storage.googleapis.com/firebase-studio-users/user-lQ3FpucD3f1iGDsWbZq3/images/clvj083ah0001m80p6w8a2g5g.png"
             alt="Oreginald Credit Partners Logo"
             width={200}
             height={200}
@@ -62,8 +69,8 @@ export default function CreditRepairPage() {
         </div>
 
         <div className="mt-12 text-center">
-          <Button size="lg" asChild>
-            <Link href="/credit-repair/signup">Get Started</Link>
+          <Button size="lg" onClick={() => setIsFormOpen(true)}>
+            Get Started
           </Button>
         </div>
       </div>

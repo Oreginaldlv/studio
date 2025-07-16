@@ -1,18 +1,25 @@
 
+'use client';
+
+import { useState } from 'react';
 import { Shirt, Music, Video, Rss } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import Image from 'next/image';
-import Link from 'next/link';
+import { VboySignupForm } from './vboy-signup-form';
+
 
 export default function VboyEmpirePage() {
+  const [isFormOpen, setIsFormOpen] = useState(false);
+
   return (
     <div
       className="relative bg-cover bg-center bg-no-repeat"
       style={{
-        backgroundImage: "url('https://placehold.co/1920x1080.png')",
+        backgroundImage: "url('https://storage.googleapis.com/firebase-studio-users/user-lQ3FpucD3f1iGDsWbZq3/images/clvj28t2p0003m80p4sc49dc7.png')",
       }}
     >
+      <VboySignupForm open={isFormOpen} onOpenChange={setIsFormOpen} />
       <div className="absolute inset-0 bg-background/80 backdrop-blur-sm" />
       <div className="relative z-10 container mx-auto px-4 py-12">
         <div className="mx-auto max-w-3xl text-center">
@@ -49,8 +56,8 @@ export default function VboyEmpirePage() {
         </div>
 
         <div className="mt-12 text-center">
-          <Button size="lg" asChild>
-            <Link href="/vboy-empire/signup">Join the Empire</Link>
+          <Button size="lg" onClick={() => setIsFormOpen(true)}>
+            Join the Empire
           </Button>
         </div>
         
