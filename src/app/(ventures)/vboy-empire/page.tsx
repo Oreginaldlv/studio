@@ -49,10 +49,11 @@ export default function VboyEmpirePage() {
       
       <div className="mt-20">
         <h2 className="text-center font-headline text-3xl font-bold mb-8">Latest Drops</h2>
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <ProductCard image="/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Ffirebase-studio-users%2Fuser-lQ3FpucD3f1iGDsWbZq3%2Fimages%2Fclvgd8g0w0002m80p4u7v1tav.png&w=1080&q=75" dataAiHint="album cover" name="What They Hatin' Fo?" price="$9.99" />
             <ProductCard image="/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Ffirebase-studio-users%2Fuser-lQ3FpucD3f1iGDsWbZq3%2Fimages%2Fclvgsdcrk0004m80pdqj9d0de.png&w=1080&q=75" dataAiHint="album cover" name="Mack or Die" price="$9.99" />
             <ProductCard image="/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Ffirebase-studio-users%2Fuser-lQ3FpucD3f1iGDsWbZq3%2Fimages%2Fclvh2q8c40006m80p4g7e9h0f.png&w=1080&q=75" dataAiHint="album cover" name="On The Gritty & Grind" price="$9.99" />
+            <ProductCard image="/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Ffirebase-studio-users%2Fuser-lQ3FpucD3f1iGDsWbZq3%2Fimages%2Fclw9d8vow0008m80ph2q0f406.png&w=1080&q=75" dataAiHint="album cover" name="It's A Dirty Game..." price="$9.99" />
         </div>
       </div>
 
