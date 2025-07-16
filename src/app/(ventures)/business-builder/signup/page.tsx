@@ -1,4 +1,4 @@
-import { BusinessPlanForm } from './business-plan-form';
+import { BusinessPlanForm } from '@/app/(ventures)/business-builder/business-plan-form';
 import { Rocket } from 'lucide-react';
 
 export default function BusinessBuilderSignupPage() {
