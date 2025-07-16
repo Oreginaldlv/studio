@@ -22,7 +22,7 @@ export default function CreditRepairPage() {
       className="relative bg-cover bg-center bg-no-repeat py-12"
       style={{
         backgroundImage:
-          "url('https://storage.googleapis.com/firebase-studio-users/user-lQ3FpucD3f1iGDsWbZq3/images/clvj09n3t0002m80p4szn4nfz.png')",
+          "url('https://placehold.co/1920x1080.png')",
       }}
     >
       <CreditRepairSignupForm open={isFormOpen} onOpenChange={setIsFormOpen} />

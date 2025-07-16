@@ -16,7 +16,7 @@ export default function VboyEmpirePage() {
     <div
       className="relative bg-cover bg-center bg-no-repeat"
       style={{
-        backgroundImage: "url('https://storage.googleapis.com/firebase-studio-users/user-lQ3FpucD3f1iGDsWbZq3/images/clvj28t2p0003m80p4sc49dc7.png')",
+        backgroundImage: "url('https://placehold.co/1920x1080.png')",
       }}
     >
       <VboySignupForm open={isFormOpen} onOpenChange={setIsFormOpen} />
