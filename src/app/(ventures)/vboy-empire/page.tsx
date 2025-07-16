@@ -10,7 +10,7 @@ export default function VboyEmpirePage() {
     <div
       className="relative bg-cover bg-center bg-no-repeat"
       style={{
-        backgroundImage: "url('https://storage.googleapis.com/firebase-studio-users/user-lQ3FpucD3f1iGDsWbZq3/images/clx208c5c000am80p3g6e9q92.png')",
+        backgroundImage: "url('https://placehold.co/1920x1080.png')",
       }}
     >
       <div className="absolute inset-0 bg-background/80 backdrop-blur-sm" />
@@ -57,10 +57,10 @@ export default function VboyEmpirePage() {
         <div className="mt-20">
           <h2 className="text-center font-headline text-3xl font-bold mb-8">Latest Drops</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <ProductCard image="https://storage.googleapis.com/firebase-studio-users/user-lQ3FpucD3f1iGDsWbZq3/images/clvgd8g0w0002m80p4u7v1tav.png" dataAiHint="album cover" name="What They Hatin' Fo?" price="$9.99" />
-              <ProductCard image="https://storage.googleapis.com/firebase-studio-users/user-lQ3FpucD3f1iGDsWbZq3/images/clvgsdcrk0004m80pdqj9d0de.png" dataAiHint="album cover" name="Mack or Die" price="$9.99" />
-              <ProductCard image="https://storage.googleapis.com/firebase-studio-users/user-lQ3FpucD3f1iGDsWbZq3/images/clvh2q8c40006m80p4g7e9h0f.png" dataAiHint="album cover" name="On The Gritty & Grind" price="$9.99" />
-              <ProductCard image="https://storage.googleapis.com/firebase-studio-users/user-lQ3FpucD3f1iGDsWbZq3/images/clw9d8vow0008m80ph2q0f406.png" dataAiHint="album cover" name="It's A Dirty Game..." price="$9.99" />
+              <ProductCard image="https://placehold.co/600x600.png" dataAiHint="album cover" name="What They Hatin' Fo?" price="$9.99" />
+              <ProductCard image="https://placehold.co/600x600.png" dataAiHint="album cover" name="Mack or Die" price="$9.99" />
+              <ProductCard image="https://placehold.co/600x600.png" dataAiHint="album cover" name="On The Gritty & Grind" price="$9.99" />
+              <ProductCard image="https://placehold.co/600x600.png" dataAiHint="album cover" name="It's A Dirty Game..." price="$9.99" />
           </div>
         </div>
       </div>
