@@ -1,4 +1,6 @@
+
 import { Film } from 'lucide-react';
+import { VideoGeneratorSignupForm } from '../video-generator-signup-form';
 
 export default function VideoGeneratorSignupPage() {
   return (
@@ -13,10 +15,7 @@ export default function VideoGeneratorSignupPage() {
         </p>
       </div>
       <div className="mx-auto mt-12 max-w-4xl">
-        {/* Form will go here */}
-        <div className="p-8 border rounded-lg text-center">
-          <p className="text-muted-foreground">The sign-up form will be implemented here.</p>
-        </div>
+        <VideoGeneratorSignupForm />
       </div>
     </div>
   );
