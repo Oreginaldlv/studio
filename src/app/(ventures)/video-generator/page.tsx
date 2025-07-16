@@ -1,6 +1,7 @@
 import { Film, BrainCircuit, Mic, Clapperboard } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
+import Link from 'next/link';
 
 export default function VideoGeneratorPage() {
   return (
@@ -34,7 +35,9 @@ export default function VideoGeneratorPage() {
       </div>
 
        <div className="mt-12 text-center">
-        <Button size="lg">Create Your Video</Button>
+        <Button size="lg" asChild>
+          <Link href="/video-generator/signup">Create Your Video</Link>
+        </Button>
       </div>
     </div>
   );

@@ -1,5 +1,6 @@
-import { BusinessPlanForm } from './business-plan-form';
 import { Rocket } from 'lucide-react';
+import Link from 'next/link';
+import { Button } from '@/components/ui/button';
 
 export default function BusinessBuilderPage() {
   return (
@@ -15,8 +16,10 @@ export default function BusinessBuilderPage() {
           build your empire together.
         </p>
       </div>
-      <div className="mx-auto mt-12 max-w-4xl">
-        <BusinessPlanForm />
+      <div className="mt-12 text-center">
+        <Button size="lg" asChild>
+          <Link href="/business-builder/signup">Start Building</Link>
+        </Button>
       </div>
     </div>
   );

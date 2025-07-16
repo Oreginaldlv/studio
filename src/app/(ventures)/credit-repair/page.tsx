@@ -1,6 +1,7 @@
 import { CreditCard, Upload, History, DollarSign } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
+import Link from 'next/link';
 
 export default function CreditRepairPage() {
   return (
@@ -39,7 +40,9 @@ export default function CreditRepairPage() {
       </div>
 
       <div className="mt-12 text-center">
-        <Button size="lg">Get Started</Button>
+        <Button size="lg" asChild>
+          <Link href="/credit-repair/signup">Get Started</Link>
+        </Button>
       </div>
     </div>
   );

@@ -2,6 +2,7 @@ import { Shirt, Music, Video, Rss } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function VboyEmpirePage() {
   return (
@@ -37,6 +38,12 @@ export default function VboyEmpirePage() {
           title="Blog/Vlog"
           description="Regularly updated content with user engagement features."
         />
+      </div>
+
+       <div className="mt-12 text-center">
+        <Button size="lg" asChild>
+          <Link href="/vboy-empire/signup">Join the Empire</Link>
+        </Button>
       </div>
       
       <div className="mt-20">

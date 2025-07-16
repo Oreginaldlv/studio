@@ -1,6 +1,7 @@
 import { Users, Mail, Table } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
+import Link from 'next/link';
 
 
 export default function CrmPage() {
@@ -35,7 +36,9 @@ export default function CrmPage() {
       </div>
 
       <div className="mt-12 text-center">
-        <Button size="lg">Start Organizing</Button>
+        <Button size="lg" asChild>
+          <Link href="/crm/signup">Start Organizing</Link>
+        </Button>
       </div>
     </div>
   );
