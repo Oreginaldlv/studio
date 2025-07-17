@@ -22,7 +22,7 @@ const ventures = [
     tagline: 'Rebuild your credit, reshape your future.',
     href: '/credit-repair',
     Icon: CreditCard,
-    image: '/images/Credit/feature.png',
+    image: '/images/Credit/logo.png',
     dataAiHint: 'finance abstract',
   },
   {
@@ -31,7 +31,7 @@ const ventures = [
     tagline: 'Exclusive content and apparel for the true fan.',
     href: '/vboy-empire',
     Icon: Shirt,
-    image: '/images/VBoy/feature.png',
+    image: '/images/Vboy/20250717_1445_VBoy Empire Redesign_remix_01k0d5drgqfp88hvgh4n506r5v.png',
     dataAiHint: 'music concert',
   },
   {
@@ -40,7 +40,7 @@ const ventures = [
     tagline: 'Connect, parse, and manage leads intelligently.',
     href: '/crm',
     Icon: Users,
-    image: '/images/CRM/feature.png',
+    image: '/images/Vboy/20250717_1511_LeadLoop CRM Logo_simple_compose_01k0d719svec2v071sgh8magez.png',
     dataAiHint: 'business network',
   },
   {
@@ -49,7 +49,7 @@ const ventures = [
     tagline: 'Create stunning videos from simple ideas.',
     href: '/video-generator',
     Icon: Film,
-    image: '/images/NMotion/feature.png',
+    image: '/images/Vboy/20250717_1510_Futuristic NMotion Logo_simple_compose_01k0d6ywn7ejhravmc9h5r3hms.png',
     dataAiHint: 'abstract motion',
   },
   {
@@ -58,7 +58,7 @@ const ventures = [
     tagline: 'Your AI co-founder for launching a new venture.',
     href: '/business-builder',
     Icon: Rocket,
-    image: '/images/Business/feature.png',
+    image: '/images/Vboy/20250717_1505_Oreginald Logo Design_simple_compose_01k0d6nz3rfh6btq0mnt1vfk4b.png',
     dataAiHint: 'startup rocket',
   },
 ];
