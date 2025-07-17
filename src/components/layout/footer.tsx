@@ -7,7 +7,15 @@ export default function Footer() {
   return (
     <footer className="border-t">
       <div className="container mx-auto px-4 py-8">
-        <div className="mb-8">
+        <div className="mb-8 space-y-8">
+           <Image
+            src="https://placehold.co/1920x50.png"
+            alt="Decorative divider"
+            width={1920}
+            height={50}
+            className="w-full h-auto"
+            data-ai-hint="abstract banner"
+          />
           <Image
             src="https://storage.googleapis.com/firebase-studio-users/user-lQ3FpucD3f1iGDsWbZq3/images/clvgdzl7c0003m80pi2k27346.png"
             alt="Decorative footer accent"
