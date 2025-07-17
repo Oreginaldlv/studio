@@ -20,7 +20,7 @@ export default function VideoGeneratorPage() {
       data-ai-hint="circuit pattern"
     >
       <Dialog open={isFormOpen} onOpenChange={setIsFormOpen}>
-        <VideoGeneratorSignupForm />
+        <VideoGeneratorSignupForm open={isFormOpen} onOpenChange={setIsFormOpen} />
       </Dialog>
       <div className="absolute inset-0 bg-background/80 backdrop-blur-sm" />
       <div className="relative z-10 container mx-auto px-4">
