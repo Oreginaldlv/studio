@@ -187,7 +187,7 @@ export default function CreditRepairPage() {
       className="relative bg-cover bg-center bg-no-repeat py-12"
       style={{
         backgroundImage:
-          "url('https://storage.googleapis.com/firebase-studio-users/user-lQ3FpucD3f1iGDsWbZq3/images/clw8s0j51000cm80q9m8t8g0z.png')",
+          "url('/images/background.png')",
       }}
       data-ai-hint="circuit pattern"
     >
@@ -196,7 +196,7 @@ export default function CreditRepairPage() {
       <div className="relative z-10 container mx-auto px-4">
         <div className="mx-auto max-w-3xl text-center">
           <Image
-            src="https://storage.googleapis.com/firebase-studio-users/user-lQ3FpucD3f1iGDsWbZq3/images/clvgd8g0w0002m80p4u7v1tav.png"
+            src="/images/Credit/logo.png"
             alt="Oreginald Credit Partners Logo"
             width={200}
             height={200}

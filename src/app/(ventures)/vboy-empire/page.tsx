@@ -16,7 +16,7 @@ export default function VboyEmpirePage() {
     <div
       className="relative bg-cover bg-center bg-no-repeat"
       style={{
-        backgroundImage: "url('https://storage.googleapis.com/firebase-studio-users/user-lQ3FpucD3f1iGDsWbZq3/images/clw8s0j51000cm80q9m8t8g0z.png')",
+        backgroundImage: "url('/images/background.png')",
       }}
       data-ai-hint="circuit pattern"
     >
@@ -65,10 +65,10 @@ export default function VboyEmpirePage() {
         <div className="mt-20">
           <h2 className="text-center font-headline text-3xl font-bold mb-8">Latest Drops</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <ProductCard image="https://placehold.co/600x600.png" dataAiHint="album cover" name="What They Hatin' Fo?" price="$9.99" />
-              <ProductCard image="https://placehold.co/600x600.png" dataAiHint="album cover" name="Mack or Die" price="$9.99" />
-              <ProductCard image="https://placehold.co/600x600.png" dataAiHint="album cover" name="On The Gritty & Grind" price="$9.99" />
-              <ProductCard image="https://placehold.co/600x600.png" dataAiHint="album cover" name="It's A Dirty Game..." price="$9.99" />
+              <ProductCard image="/images/VBoy/album1.png" dataAiHint="album cover" name="What They Hatin' Fo?" price="$9.99" />
+              <ProductCard image="/images/VBoy/album2.png" dataAiHint="album cover" name="Mack or Die" price="$9.99" />
+              <ProductCard image="/images/VBoy/album3.png" dataAiHint="album cover" name="On The Gritty & Grind" price="$9.99" />
+              <ProductCard image="/images/VBoy/album4.png" dataAiHint="album cover" name="It's A Dirty Game..." price="$9.99" />
           </div>
         </div>
       </div>

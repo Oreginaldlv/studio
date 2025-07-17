@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="container mx-auto px-4 py-8">
         <div className="mb-8 space-y-8">
            <Image
-            src="https://storage.googleapis.com/firebase-studio-users/user-lQ3FpucD3f1iGDsWbZq3/images/clw92715i0004m80pct3gawen.png"
+            src="/images/footer-accent-2.png"
             alt="Decorative divider"
             width={1920}
             height={50}
@@ -17,7 +17,7 @@ export default function Footer() {
             data-ai-hint="abstract banner"
           />
           <Image
-            src="https://storage.googleapis.com/firebase-studio-users/user-lQ3FpucD3f1iGDsWbZq3/images/clvgdzl7c0003m80pi2k27346.png"
+            src="/images/footer-accent-1.png"
             alt="Decorative footer accent"
             width={1920}
             height={200}

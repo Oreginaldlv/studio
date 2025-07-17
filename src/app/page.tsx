@@ -21,7 +21,7 @@ const ventures = [
     tagline: 'Rebuild your credit, reshape your future.',
     href: '/credit-repair',
     Icon: CreditCard,
-    image: 'https://placehold.co/1200x800.png',
+    image: '/images/credit_feature.png',
     dataAiHint: 'finance abstract',
   },
   {
@@ -30,7 +30,7 @@ const ventures = [
     tagline: 'Exclusive content and apparel for the true fan.',
     href: '/vboy-empire',
     Icon: Shirt,
-    image: 'https://placehold.co/1200x800.png',
+    image: '/images/vboy_feature.png',
     dataAiHint: 'music concert',
   },
   {
@@ -39,7 +39,7 @@ const ventures = [
     tagline: 'Connect, parse, and manage leads intelligently.',
     href: '/crm',
     Icon: Users,
-    image: 'https://placehold.co/1200x800.png',
+    image: '/images/crm_feature.png',
     dataAiHint: 'business network',
   },
   {
@@ -48,7 +48,7 @@ const ventures = [
     tagline: 'Create stunning videos from simple ideas.',
     href: '/video-generator',
     Icon: Film,
-    image: 'https://placehold.co/1200x800.png',
+    image: '/images/nmotion_feature.png',
     dataAiHint: 'abstract motion',
   },
   {
@@ -57,7 +57,7 @@ const ventures = [
     tagline: 'Your AI co-founder for launching a new venture.',
     href: '/business-builder',
     Icon: Rocket,
-    image: 'https://placehold.co/1200x800.png',
+    image: '/images/business_feature.png',
     dataAiHint: 'startup rocket',
   },
 ];

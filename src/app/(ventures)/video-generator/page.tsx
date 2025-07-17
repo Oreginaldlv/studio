@@ -14,7 +14,7 @@ export default function VideoGeneratorPage() {
     <div
       className="relative bg-cover bg-center bg-no-repeat py-12"
       style={{
-        backgroundImage: "url('https://storage.googleapis.com/firebase-studio-users/user-lQ3FpucD3f1iGDsWbZq3/images/clw8s0j51000cm80q9m8t8g0z.png')",
+        backgroundImage: "url('/images/background.png')",
       }}
       data-ai-hint="circuit pattern"
     >
