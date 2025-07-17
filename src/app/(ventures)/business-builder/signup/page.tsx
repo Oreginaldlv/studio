@@ -1,9 +1,26 @@
+
+'use client';
+
+import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import { BusinessPlanForm } from '@/app/(ventures)/business-builder/business-plan-form';
 import { Rocket } from 'lucide-react';
 import { Dialog } from '@/components/ui/dialog';
 
-
 export default function BusinessBuilderSignupPage() {
+  const [open, setOpen] = useState(true);
+  const router = useRouter();
+
+  const handleOpenChange = (isOpen: boolean) => {
+    if (!isOpen) {
+      setOpen(false);
+      // Allow time for the dialog to close before navigating
+      setTimeout(() => {
+        router.push('/business-builder');
+      }, 200);
+    }
+  };
+
   return (
     <div className="container mx-auto px-4 py-12">
       <div className="mx-auto max-w-3xl text-center">
@@ -16,7 +33,7 @@ export default function BusinessBuilderSignupPage() {
         </p>
       </div>
       <div className="mx-auto mt-12 max-w-4xl">
-        <Dialog open={true}>
+        <Dialog open={open} onOpenChange={handleOpenChange}>
           <BusinessPlanForm />
         </Dialog>
       </div>
