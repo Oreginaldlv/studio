@@ -14,9 +14,9 @@ export default function BusinessBuilderPage() {
     <div
       className="relative bg-cover bg-center bg-no-repeat py-12"
       style={{
-        backgroundImage: "url('https://placehold.co/1920x1080.png')",
+        backgroundImage: "url('https://storage.googleapis.com/firebase-studio-users/user-lQ3FpucD3f1iGDsWbZq3/images/clw8s0j51000cm80q9m8t8g0z.png')",
       }}
-      data-ai-hint="urban tech luxury"
+      data-ai-hint="circuit pattern"
     >
       <div className="absolute inset-0 bg-background/80 backdrop-blur-sm" />
       <div className="relative z-10 container mx-auto px-4">
