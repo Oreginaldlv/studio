@@ -12,7 +12,7 @@ import {
 } from '@/components/ui/carousel';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { ArrowRight, CreditCard, Film, BrainCircuit, Users, Shirt, Rocket } from 'lucide-react';
+import { ArrowRight, CreditCard, Film, Users, Shirt, Rocket } from 'lucide-react';
 import Autoplay from 'embla-carousel-autoplay';
 
 const ventures = [
@@ -22,7 +22,7 @@ const ventures = [
     tagline: 'Rebuild your credit, reshape your future.',
     href: '/credit-repair',
     Icon: CreditCard,
-    image: '/images/credit_feature.png',
+    image: '/images/Credit/feature.png',
     dataAiHint: 'finance abstract',
   },
   {
@@ -31,7 +31,7 @@ const ventures = [
     tagline: 'Exclusive content and apparel for the true fan.',
     href: '/vboy-empire',
     Icon: Shirt,
-    image: '/images/vboy_feature.png',
+    image: '/images/VBoy/feature.png',
     dataAiHint: 'music concert',
   },
   {
@@ -40,7 +40,7 @@ const ventures = [
     tagline: 'Connect, parse, and manage leads intelligently.',
     href: '/crm',
     Icon: Users,
-    image: '/images/crm_feature.png',
+    image: '/images/CRM/feature.png',
     dataAiHint: 'business network',
   },
   {
@@ -49,7 +49,7 @@ const ventures = [
     tagline: 'Create stunning videos from simple ideas.',
     href: '/video-generator',
     Icon: Film,
-    image: '/images/nmotion_feature.png',
+    image: '/images/NMotion/feature.png',
     dataAiHint: 'abstract motion',
   },
   {
@@ -58,7 +58,7 @@ const ventures = [
     tagline: 'Your AI co-founder for launching a new venture.',
     href: '/business-builder',
     Icon: Rocket,
-    image: '/images/business_feature.png',
+    image: '/images/Business/feature.png',
     dataAiHint: 'startup rocket',
   },
 ];
