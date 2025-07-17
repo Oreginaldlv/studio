@@ -60,10 +60,10 @@ export default function VboyEmpirePage() {
         <div className="mt-20">
           <h2 className="text-center font-headline text-3xl font-bold mb-8">Latest Drops</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <ProductCard image="/images/album1.png" dataAiHint="album cover" name="What They Hatin' Fo?" price="$9.99" />
-              <ProductCard image="/images/album2.png" dataAiHint="album cover" name="Mack or Die" price="$9.99" />
-              <ProductCard image="/images/album3.png" dataAiHint="album cover" name="On The Gritty & Grind" price="$9.99" />
-              <ProductCard image="/images/album4.png" dataAiHint="album cover" name="It's A Dirty Game..." price="$9.99" />
+              <ProductCard image="/images/Vboy/4943_1070247001898_585999_n.jpg" dataAiHint="album cover" name="What They Hatin' Fo?" price="$9.99" />
+              <ProductCard image="/images/Vboy/527180_2927373268894_230604746_n.jpg" dataAiHint="album cover" name="Mack or Die" price="$9.99" />
+              <ProductCard image="/images/Vboy/4943_1070247041899_7091156_n.jpg" dataAiHint="album cover" name="On The Gritty & Grind" price="$9.99" />
+              <ProductCard image="/images/Vboy/4943_1070246961897_442993_n.jpg" dataAiHint="album cover" name="It's A Dirty Game..." price="$9.99" />
           </div>
         </div>
       </div>
