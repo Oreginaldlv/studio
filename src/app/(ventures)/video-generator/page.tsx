@@ -6,6 +6,7 @@ import { Film, BrainCircuit, Mic, Clapperboard } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { VideoGeneratorSignupForm } from './video-generator-signup-form';
+import { Dialog } from '@/components/ui/dialog';
 
 export default function VideoGeneratorPage() {
   const [isFormOpen, setIsFormOpen] = useState(false);
@@ -18,7 +19,9 @@ export default function VideoGeneratorPage() {
       }}
       data-ai-hint="circuit pattern"
     >
-      <VideoGeneratorSignupForm open={isFormOpen} onOpenChange={setIsFormOpen} />
+      <Dialog open={isFormOpen} onOpenChange={setIsFormOpen}>
+        <VideoGeneratorSignupForm />
+      </Dialog>
       <div className="absolute inset-0 bg-background/80 backdrop-blur-sm" />
       <div className="relative z-10 container mx-auto px-4">
         <div className="mx-auto max-w-3xl text-center">
