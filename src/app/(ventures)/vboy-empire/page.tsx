@@ -12,7 +12,7 @@ export default function VboyEmpirePage() {
     <div
       className="relative bg-cover bg-center bg-no-repeat"
       style={{
-        backgroundImage: "url('/images/20250717_0536_Urban-Tech Luxury Pattern_simple_compose_01k0c60kwafcgs9xcf1jyc9yme.png')",
+        backgroundImage: "url('/images/background.png')",
       }}
       data-ai-hint="luxury pattern"
     >
@@ -60,10 +60,10 @@ export default function VboyEmpirePage() {
         <div className="mt-20">
           <h2 className="text-center font-headline text-3xl font-bold mb-8">Latest Drops</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <ProductCard image="/images/VBoy/album1.png" dataAiHint="album cover" name="What They Hatin' Fo?" price="$9.99" />
-              <ProductCard image="/images/VBoy/album2.png" dataAiHint="album cover" name="Mack or Die" price="$9.99" />
-              <ProductCard image="/images/VBoy/album3.png" dataAiHint="album cover" name="On The Gritty & Grind" price="$9.99" />
-              <ProductCard image="/images/VBoy/album4.png" dataAiHint="album cover" name="It's A Dirty Game..." price="$9.99" />
+              <ProductCard image="/images/vboy/album1.png" dataAiHint="album cover" name="What They Hatin' Fo?" price="$9.99" />
+              <ProductCard image="/images/vboy/album2.png" dataAiHint="album cover" name="Mack or Die" price="$9.99" />
+              <ProductCard image="/images/vboy/album3.png" dataAiHint="album cover" name="On The Gritty & Grind" price="$9.99" />
+              <ProductCard image="/images/vboy/album4.png" dataAiHint="album cover" name="It's A Dirty Game..." price="$9.99" />
           </div>
         </div>
       </div>
