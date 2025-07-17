@@ -91,7 +91,7 @@ function ProductCard({ image, dataAiHint, name, price }: { image: string, dataAi
     return (
         <Card className="overflow-hidden group bg-background/80">
             <CardContent className="p-0">
-                <Image src={image} alt={name} width={600} height={600} className="object-cover w-full h-auto aspect-square group-hover:scale-105 transition-transform duration-300" data-ai-hint={dataAiHint} />
+                <Image src={image} alt={`Album art for ${name}`} width={600} height={600} className="object-cover w-full h-auto aspect-square group-hover:scale-105 transition-transform duration-300 bg-muted" data-ai-hint={dataAiHint} />
             </CardContent>
             <CardHeader>
                 <CardTitle>{name}</CardTitle>
