@@ -16,6 +16,7 @@ export default function BusinessBuilderPage() {
       style={{
         backgroundImage: "url('https://placehold.co/1920x1080.png')",
       }}
+      data-ai-hint="urban tech luxury"
     >
       <div className="absolute inset-0 bg-background/80 backdrop-blur-sm" />
       <div className="relative z-10 container mx-auto px-4">

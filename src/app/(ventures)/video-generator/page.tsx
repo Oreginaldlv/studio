@@ -16,6 +16,7 @@ export default function VideoGeneratorPage() {
       style={{
         backgroundImage: "url('https://placehold.co/1920x1080.png')",
       }}
+      data-ai-hint="urban tech luxury"
     >
       <VideoGeneratorSignupForm open={isFormOpen} onOpenChange={setIsFormOpen} />
       <div className="absolute inset-0 bg-background/80 backdrop-blur-sm" />
