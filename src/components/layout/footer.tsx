@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="container mx-auto px-4 py-8">
         <div className="mb-8 space-y-8">
            <Image
-            src="https://placehold.co/1920x50.png"
+            src="https://storage.googleapis.com/firebase-studio-users/user-lQ3FpucD3f1iGDsWbZq3/images/clw91v2v40003m80p4k6j8d4q.png"
             alt="Decorative divider"
             width={1920}
             height={50}
