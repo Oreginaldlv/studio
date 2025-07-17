@@ -17,7 +17,6 @@ import {
   FormMessage,
 } from '@/components/ui/form';
 import {
-  Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
@@ -28,6 +27,7 @@ import { Checkbox } from '@/components/ui/checkbox';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
 import { Loader2 } from 'lucide-react';
+import { ScrollArea } from '@/components/ui/scroll-area';
 
 const contentTypes = [
   { id: 'music', label: 'Music' },
@@ -85,12 +85,12 @@ export function VboySignupForm({ open, onOpenChange }: VboySignupFormProps) {
   }
 
   return (
-    <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
           <DialogTitle>Join the VBoy Empire</DialogTitle>
           <DialogDescription>Sign up for exclusive content, merch drops, and more.</DialogDescription>
         </DialogHeader>
+        <ScrollArea className="max-h-[70vh] pr-6">
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
             <FormField control={form.control} name="fullName" render={({ field }) => (
@@ -141,9 +141,9 @@ export function VboySignupForm({ open, onOpenChange }: VboySignupFormProps) {
                                 checked={field.value?.includes(item.id)}
                                 onCheckedChange={(checked) => {
                                   return checked
-                                    ? field.onChange([...field.value, item.id])
+                                    ? field.onChange([...(field.value || []), item.id])
                                     : field.onChange(
-                                        field.value?.filter(
+                                        (field.value || []).filter(
                                           (value) => value !== item.id
                                         )
                                       )
@@ -183,7 +183,7 @@ export function VboySignupForm({ open, onOpenChange }: VboySignupFormProps) {
             </Button>
           </form>
         </Form>
+        </ScrollArea>
       </DialogContent>
-    </Dialog>
   );
 }
