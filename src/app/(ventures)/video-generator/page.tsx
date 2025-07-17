@@ -11,9 +11,9 @@ export default function VideoGeneratorPage() {
     <div
       className="relative bg-cover bg-center bg-no-repeat py-12"
       style={{
-        backgroundImage: "url('/images/background.png')",
+        backgroundImage: "url('/images/20250717_0536_Urban-Tech Luxury Pattern_simple_compose_01k0c60kwafcgs9xcf1jyc9yme.png')",
       }}
-      data-ai-hint="circuit pattern"
+      data-ai-hint="luxury pattern"
     >
       <div className="absolute inset-0 bg-background/80 backdrop-blur-sm" />
       <div className="relative z-10 container mx-auto px-4">
