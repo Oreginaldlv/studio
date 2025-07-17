@@ -10,7 +10,7 @@ export default function Footer() {
       <div className="container mx-auto px-4 py-8">
         <div className="mb-8 space-y-8">
            <Image
-            src="/images/footer-accent-2.png"
+            src="/images/20250717_0605_Empire Wave Divider_simple_compose_01k0c7s4m5e7hay9dt8w8nhwka.png"
             alt="Decorative divider"
             width={1920}
             height={50}
@@ -18,7 +18,7 @@ export default function Footer() {
             data-ai-hint="abstract banner"
           />
           <Image
-            src="/images/footer-accent-1.png"
+            src="/images/20250717_0556_Oreginald Abstract Footer Accent_simple_compose_01k0c7f7wvechw6r96y0zmn2b1.png"
             alt="Decorative footer accent"
             width={1920}
             height={200}
