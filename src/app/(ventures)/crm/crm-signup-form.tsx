@@ -17,7 +17,6 @@ import {
   FormMessage,
 } from '@/components/ui/form';
 import {
-  Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
@@ -37,12 +36,7 @@ const formSchema = z.object({
   connectionDetails: z.string().optional(),
 });
 
-interface CrmSignupFormProps {
-  open: boolean;
-  onOpenChange?: (open: boolean) => void;
-}
-
-export function CrmSignupForm({ open, onOpenChange }: CrmSignupFormProps) {
+export function CrmSignupForm() {
   const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
 
@@ -69,70 +63,67 @@ export function CrmSignupForm({ open, onOpenChange }: CrmSignupFormProps) {
       description: 'Your information has been submitted.',
     });
     setIsLoading(false);
-    if(onOpenChange) onOpenChange(false);
   }
 
   return (
-    <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="sm:max-w-[425px]">
-        <DialogHeader>
-          <DialogTitle>Get Started with LeadLoop CRM</DialogTitle>
-          <DialogDescription>Organize your contacts and streamline your outreach.</DialogDescription>
-        </DialogHeader>
-        <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
-            <FormField control={form.control} name="fullName" render={({ field }) => (
-              <FormItem>
-                <FormLabel>Full Name</FormLabel>
-                <FormControl><Input placeholder="John Doe" {...field} /></FormControl>
-                <FormMessage />
-              </FormItem>
-            )} />
-            <FormField control={form.control} name="email" render={({ field }) => (
-              <FormItem>
-                <FormLabel>Email</FormLabel>
-                <FormControl><Input type="email" placeholder="you@example.com" {...field} /></FormControl>
-                <FormMessage />
-              </FormItem>
-            )} />
-            <FormField control={form.control} name="password" render={({ field }) => (
-              <FormItem>
-                <FormLabel>Password</FormLabel>
-                <FormControl><Input type="password" placeholder="••••••••" {...field} /></FormControl>
-                <FormMessage />
-              </FormItem>
-            )} />
-            <FormField control={form.control} name="businessName" render={({ field }) => (
-              <FormItem>
-                <FormLabel>Business Name</FormLabel>
-                <FormControl><Input placeholder="Your Company Inc." {...field} /></FormControl>
-                <FormMessage />
-              </FormItem>
-            )} />
-            <FormField control={form.control} name="leadsWanted" render={({ field }) => (
-              <FormItem>
-                <FormLabel>Type of Leads Wanted</FormLabel>
-                <FormControl><Textarea placeholder="e.g., Real estate leads in California" {...field} /></FormControl>
-                <FormMessage />
-              </FormItem>
-            )} />
-             <FormField control={form.control} name="connectionDetails" render={({ field }) => (
-              <FormItem>
-                <FormLabel>Email Connection</FormLabel>
-                 <FormControl>
-                  <Button type="button" variant="outline" className="w-full" disabled>Connect Gmail/IMAP (Coming Soon)</Button>
-                </FormControl>
-                <FormDescription>We'll implement OAuth for secure email connection here.</FormDescription>
-                <FormMessage />
-              </FormItem>
-            )} />
-            <Button type="submit" disabled={isLoading} className="w-full">
-              {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-              Sign Up
-            </Button>
-          </form>
-        </Form>
-      </DialogContent>
-    </Dialog>
+    <DialogContent className="sm:max-w-[425px]">
+      <DialogHeader>
+        <DialogTitle>Get Started with LeadLoop CRM</DialogTitle>
+        <DialogDescription>Organize your contacts and streamline your outreach.</DialogDescription>
+      </DialogHeader>
+      <Form {...form}>
+        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+          <FormField control={form.control} name="fullName" render={({ field }) => (
+            <FormItem>
+              <FormLabel>Full Name</FormLabel>
+              <FormControl><Input placeholder="John Doe" {...field} /></FormControl>
+              <FormMessage />
+            </FormItem>
+          )} />
+          <FormField control={form.control} name="email" render={({ field }) => (
+            <FormItem>
+              <FormLabel>Email</FormLabel>
+              <FormControl><Input type="email" placeholder="you@example.com" {...field} /></FormControl>
+              <FormMessage />
+            </FormItem>
+          )} />
+          <FormField control={form.control} name="password" render={({ field }) => (
+            <FormItem>
+              <FormLabel>Password</FormLabel>
+              <FormControl><Input type="password" placeholder="••••••••" {...field} /></FormControl>
+              <FormMessage />
+            </FormItem>
+          )} />
+          <FormField control={form.control} name="businessName" render={({ field }) => (
+            <FormItem>
+              <FormLabel>Business Name</FormLabel>
+              <FormControl><Input placeholder="Your Company Inc." {...field} /></FormControl>
+              <FormMessage />
+            </FormItem>
+          )} />
+          <FormField control={form.control} name="leadsWanted" render={({ field }) => (
+            <FormItem>
+              <FormLabel>Type of Leads Wanted</FormLabel>
+              <FormControl><Textarea placeholder="e.g., Real estate leads in California" {...field} /></FormControl>
+              <FormMessage />
+            </FormItem>
+          )} />
+           <FormField control={form.control} name="connectionDetails" render={({ field }) => (
+            <FormItem>
+              <FormLabel>Email Connection</FormLabel>
+               <FormControl>
+                <Button type="button" variant="outline" className="w-full" disabled>Connect Gmail/IMAP (Coming Soon)</Button>
+              </FormControl>
+              <FormDescription>We'll implement OAuth for secure email connection here.</FormDescription>
+              <FormMessage />
+            </FormItem>
+          )} />
+          <Button type="submit" disabled={isLoading} className="w-full">
+            {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+            Sign Up
+          </Button>
+        </form>
+      </Form>
+    </DialogContent>
   );
 }
