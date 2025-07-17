@@ -1,6 +1,6 @@
 
 import { CreditCard } from 'lucide-react';
-import { CreditRepairSignupForm } from './credit-repair-signup-form';
+import { CreditRepairSignupForm } from '../credit-repair-signup-form';
 
 export default function CreditRepairSignupPage() {
   return (
