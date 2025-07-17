@@ -1,16 +1,12 @@
 
 'use client';
 
-import { useState } from 'react';
 import { Film, BrainCircuit, Mic, Clapperboard } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { VideoGeneratorSignupForm } from './video-generator-signup-form';
-import { Dialog } from '@/components/ui/dialog';
+import Link from 'next/link';
 
 export default function VideoGeneratorPage() {
-  const [isFormOpen, setIsFormOpen] = useState(false);
-
   return (
     <div
       className="relative bg-cover bg-center bg-no-repeat py-12"
@@ -19,9 +15,6 @@ export default function VideoGeneratorPage() {
       }}
       data-ai-hint="circuit pattern"
     >
-      <Dialog open={isFormOpen} onOpenChange={setIsFormOpen}>
-        <VideoGeneratorSignupForm open={isFormOpen} onOpenChange={setIsFormOpen} />
-      </Dialog>
       <div className="absolute inset-0 bg-background/80 backdrop-blur-sm" />
       <div className="relative z-10 container mx-auto px-4">
         <div className="mx-auto max-w-3xl text-center">
@@ -53,8 +46,8 @@ export default function VideoGeneratorPage() {
         </div>
 
         <div className="mt-12 text-center">
-          <Button size="lg" onClick={() => setIsFormOpen(true)}>
-            Create Your Video
+          <Button size="lg" asChild>
+            <Link href="/video-generator/signup">Create Your Video</Link>
           </Button>
         </div>
       </div>

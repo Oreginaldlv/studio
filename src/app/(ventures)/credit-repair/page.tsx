@@ -1,7 +1,7 @@
 
 'use client';
 
-import { useState } from 'react';
+import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import {
   Card,
@@ -11,7 +11,6 @@ import {
   CardDescription,
 } from '@/components/ui/card';
 import Image from 'next/image';
-import { CreditRepairSignupForm } from './credit-repair-signup-form';
 
 const IconUploadCenter = () => (
   <svg
@@ -180,8 +179,6 @@ const IconDisputeGeneration = () => (
 
 
 export default function CreditRepairPage() {
-  const [isFormOpen, setIsFormOpen] = useState(false);
-
   return (
     <div
       className="relative bg-cover bg-center bg-no-repeat py-12"
@@ -191,7 +188,6 @@ export default function CreditRepairPage() {
       }}
       data-ai-hint="circuit pattern"
     >
-      <CreditRepairSignupForm open={isFormOpen} onOpenChange={setIsFormOpen} />
       <div className="absolute inset-0 bg-background/80 backdrop-blur-sm" />
       <div className="relative z-10 container mx-auto px-4">
         <div className="mx-auto max-w-3xl text-center">
@@ -235,8 +231,8 @@ export default function CreditRepairPage() {
         </div>
 
         <div className="mt-12 text-center">
-          <Button size="lg" onClick={() => setIsFormOpen(true)}>
-            Get Started
+          <Button size="lg" asChild>
+            <Link href="/credit-repair/signup">Get Started</Link>
           </Button>
         </div>
       </div>

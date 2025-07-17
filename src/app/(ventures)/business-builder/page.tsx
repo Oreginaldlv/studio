@@ -3,13 +3,9 @@
 
 import { Rocket } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { useState } from 'react';
-import { BusinessPlanForm } from './business-plan-form';
-import { Dialog } from '@/components/ui/dialog';
+import Link from 'next/link';
 
 export default function BusinessBuilderPage() {
-  const [isFormOpen, setIsFormOpen] = useState(false);
-
   return (
     <div
       className="relative bg-cover bg-center bg-no-repeat py-12"
@@ -32,15 +28,10 @@ export default function BusinessBuilderPage() {
           </p>
         </div>
         <div className="mt-12 text-center">
-          <Button size="lg" onClick={() => setIsFormOpen(true)}>
-            Start Building
+          <Button size="lg" asChild>
+            <Link href="/business-builder/signup">Start Building</Link>
           </Button>
         </div>
-      </div>
-       <div className="mx-auto mt-12 max-w-4xl px-4">
-        <Dialog open={isFormOpen} onOpenChange={setIsFormOpen}>
-          <BusinessPlanForm />
-        </Dialog>
       </div>
     </div>
   );

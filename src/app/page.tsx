@@ -20,7 +20,7 @@ const ventures = [
     name: 'Oreginald Credit',
     title: 'Credit Repair SaaS',
     tagline: 'Rebuild your credit, reshape your future.',
-    href: '/credit-repair',
+    href: '/credit-repair/signup',
     Icon: CreditCard,
     image: '/images/Credit/logo.png',
     dataAiHint: 'finance abstract',
@@ -29,7 +29,7 @@ const ventures = [
     name: 'VBoy Empire',
     title: 'Entertainment & Merch',
     tagline: 'Exclusive content and apparel for the true fan.',
-    href: '/vboy-empire',
+    href: '/vboy-empire/signup',
     Icon: Shirt,
     image: '/images/Vboy/20250717_1445_VBoy Empire Redesign_remix_01k0d5drgqfp88hvgh4n506r5v.png',
     dataAiHint: 'music concert',
@@ -38,7 +38,7 @@ const ventures = [
     name: 'LeadLoop CRM',
     title: 'CRM for Leads',
     tagline: 'Connect, parse, and manage leads intelligently.',
-    href: '/crm',
+    href: '/crm/signup',
     Icon: Users,
     image: '/images/Vboy/20250717_1511_LeadLoop CRM Logo_simple_compose_01k0d719svec2v071sgh8magez.png',
     dataAiHint: 'business network',
@@ -47,7 +47,7 @@ const ventures = [
     name: 'NMotion AI',
     title: 'AI Video Generator',
     tagline: 'Create stunning videos from simple ideas.',
-    href: '/video-generator',
+    href: '/video-generator/signup',
     Icon: Film,
     image: '/images/Vboy/20250717_1510_Futuristic NMotion Logo_simple_compose_01k0d6ywn7ejhravmc9h5r3hms.png',
     dataAiHint: 'abstract motion',
@@ -56,7 +56,7 @@ const ventures = [
     name: 'Oreginald Business Builder',
     title: 'AI Business Builder',
     tagline: 'Your AI co-founder for launching a new venture.',
-    href: '/business-builder',
+    href: '/business-builder/signup',
     Icon: Rocket,
     image: '/images/Vboy/20250717_1505_Oreginald Logo Design_simple_compose_01k0d6nz3rfh6btq0mnt1vfk4b.png',
     dataAiHint: 'startup rocket',
@@ -125,7 +125,7 @@ export default function Home() {
                             variant="default"
                             className="mt-4 group/button"
                           >
-                            Learn More
+                            Get Started
                             <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover/button:translate-x-1" />
                           </Button>
                         </Link>

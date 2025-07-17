@@ -1,17 +1,13 @@
 
 'use client';
 
-import { useState } from 'react';
 import { Shirt, Music, Video, Rss } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import Image from 'next/image';
-import { VboySignupForm } from './vboy-signup-form';
-
+import Link from 'next/link';
 
 export default function VboyEmpirePage() {
-  const [isFormOpen, setIsFormOpen] = useState(false);
-
   return (
     <div
       className="relative bg-cover bg-center bg-no-repeat"
@@ -20,7 +16,6 @@ export default function VboyEmpirePage() {
       }}
       data-ai-hint="circuit pattern"
     >
-      <VboySignupForm open={isFormOpen} onOpenChange={setIsFormOpen} />
       <div className="absolute inset-0 bg-background/80 backdrop-blur-sm" />
       <div className="relative z-10 container mx-auto px-4 py-12">
         <div className="mx-auto max-w-3xl text-center">
@@ -57,8 +52,8 @@ export default function VboyEmpirePage() {
         </div>
 
         <div className="mt-12 text-center">
-          <Button size="lg" onClick={() => setIsFormOpen(true)}>
-            Join the Empire
+          <Button size="lg" asChild>
+            <Link href="/vboy-empire/signup">Join the Empire</Link>
           </Button>
         </div>
         
