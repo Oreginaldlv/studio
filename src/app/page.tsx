@@ -68,13 +68,16 @@ export default function Home() {
     <div className="flex flex-col items-center justify-center space-y-12 md:space-y-20 py-12 md:py-24">
       <section className="container mx-auto px-4 text-center">
         <h1 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
-          The Oreginald Dynasty
+          Fix Your Credit the Smart Way
         </h1>
         <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed mt-4">
-          Welcome to Oreginald Inc. A collective of modern ventures, each a
-          mini-business under one brand, unified by a consistent aesthetic and a
-          seamless user experience designed to exude glamour and excellence.
+          Leverage our AI-powered tools to analyze your credit report, generate effective dispute letters, and take control of your financial future.
         </p>
+        <div className="mt-8">
+            <Button size="lg" asChild>
+                <Link href="/credit-repair/start">Get Started Now</Link>
+            </Button>
+        </div>
       </section>
 
       <section className="w-full">
