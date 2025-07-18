@@ -44,9 +44,12 @@ export default function CreditRepairPage() {
               A fully modern SaaS credit repair platform offering both DIY and DFY
               (Done For You) services.
             </p>
-            <div className="mt-8">
+            <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
               <Button size="lg" asChild>
                 <Link href="/credit-repair/signup">Get Started For Free</Link>
+              </Button>
+               <Button size="lg" variant="outline" asChild>
+                <Link href="/credit-repair/login">Client Login</Link>
               </Button>
             </div>
           </div>
