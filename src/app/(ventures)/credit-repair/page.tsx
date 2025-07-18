@@ -9,257 +9,217 @@ import {
   CardHeader,
   CardTitle,
   CardDescription,
+  CardFooter,
 } from '@/components/ui/card';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { CheckCircle, UploadCloud, FileScan, Mail, MessageSquare } from 'lucide-react';
 import Image from 'next/image';
-
-const IconUploadCenter = () => (
-  <svg
-    width="32"
-    height="32"
-    viewBox="0 0 96 96"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <defs>
-      <filter id="shadow-upload" x="-20%" y="-20%" width="140%" height="140%">
-        <feDropShadow dx="2" dy="3" stdDeviation="3" floodColor="#000000" floodOpacity="0.15" />
-      </filter>
-    </defs>
-    <g filter="url(#shadow-upload)">
-      <circle cx="48" cy="48" r="44" fill="hsl(var(--background))" />
-      <path
-        d="M66 58C71.5228 58 76 53.5228 76 48C76 42.4772 71.5228 38 66 38C66 32.4772 61.5228 28 56 28C50.4772 28 46 32.4772 46 38H44C35.1634 38 28 45.1634 28 54C28 62.8366 35.1634 70 44 70H66"
-        stroke="#FFC300"
-        strokeWidth="4"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M54 52L48 46L42 52"
-        stroke="#FFC300"
-        strokeWidth="4"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M48 46V62"
-        stroke="#FFC300"
-        strokeWidth="4"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </g>
-  </svg>
-);
-
-const IconLetterHistory = () => (
-  <svg
-    width="32"
-    height="32"
-    viewBox="0 0 96 96"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <defs>
-      <filter id="shadow-history" x="-20%" y="-20%" width="140%" height="140%">
-        <feDropShadow dx="2" dy="3" stdDeviation="3" floodColor="#000000" floodOpacity="0.15" />
-      </filter>
-    </defs>
-    <g filter="url(#shadow-history)">
-      <circle cx="48" cy="48" r="44" fill="hsl(var(--background))" />
-      <path
-        d="M40 28H62C64.2091 28 66 29.7909 66 32V68C66 70.2091 64.2091 72 62 72H34C31.7909 72 30 70.2091 30 68V50"
-        stroke="#FFC300"
-        strokeWidth="4"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M36 28V24H58V28"
-        stroke="#FFC300"
-        strokeWidth="4"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <circle cx="44" cy="46" r="12" stroke="#FFC300" strokeWidth="4" />
-      <path
-        d="M44 38V46H50"
-        stroke="#FFC300"
-        strokeWidth="4"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </g>
-  </svg>
-);
-
-const IconPricingPlans = () => (
-  <svg
-    width="32"
-    height="32"
-    viewBox="0 0 96 96"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-     <defs>
-      <filter id="shadow-pricing" x="-20%" y="-20%" width="140%" height="140%">
-        <feDropShadow dx="2" dy="3" stdDeviation="3" floodColor="#000000" floodOpacity="0.15" />
-      </filter>
-    </defs>
-    <g filter="url(#shadow-pricing)">
-      <circle cx="48" cy="48" r="44" fill="hsl(var(--background))" />
-      <path
-        d="M48 28V68"
-        stroke="#FFC300"
-        strokeWidth="4"
-        strokeLinecap="round"
-      />
-      <path
-        d="M38 34C38 30.6863 40.6863 28 44 28H52C56.4183 28 60 31.5817 60 36C60 40.4183 56.4183 44 52 44H44C39.5817 44 36 47.5817 36 52C36 56.4183 39.5817 60 44 60H52C55.3137 60 58 62.6863 58 66"
-        stroke="#FFC300"
-        strokeWidth="4"
-        strokeLinecap="round"
-      />
-      <path
-        d="M32 40H64"
-        stroke="#FFC300"
-        strokeWidth="4"
-        strokeLinecap="round"
-      />
-      <path
-        d="M32 56H64"
-        stroke="#FFC300"
-        strokeWidth="4"
-        strokeLinecap="round"
-      />
-    </g>
-  </svg>
-);
-
-const IconDisputeGeneration = () => (
-  <svg
-    width="32"
-    height="32"
-    viewBox="0 0 96 96"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-     <defs>
-      <filter id="shadow-dispute" x="-20%" y="-20%" width="140%" height="140%">
-        <feDropShadow dx="2" dy="3" stdDeviation="3" floodColor="#000000" floodOpacity="0.15" />
-      </filter>
-    </defs>
-    <g filter="url(#shadow-dispute)">
-      <circle cx="48" cy="48" r="44" fill="hsl(var(--background))" />
-      <path
-        d="M62 66H34C31.7908 66 30 64.2092 30 62V34C30 31.7908 31.7908 30 34 30H50L66 46V62C66 64.2092 64.2092 66 62 66Z"
-        stroke="#FFC300"
-        strokeWidth="4"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M48 30C48 26.6863 45.3137 24 42 24C38.6863 24 36 26.6863 36 30"
-        stroke="#FFC300"
-        strokeWidth="4"
-        strokeLinecap="round"
-      />
-      <rect
-        x="42"
-        y="42"
-        width="12"
-        height="8"
-        rx="2"
-        stroke="#FFC300"
-        strokeWidth="4"
-      />
-      <circle cx="48" cy="36" r="2" fill="#FFC300" />
-    </g>
-  </svg>
-);
-
 
 export default function CreditRepairPage() {
   return (
-    <div
-      className="relative bg-cover bg-center bg-no-repeat py-12"
-      style={{
-        backgroundImage:
-          "url('/images/20250717_0536_Urban-Tech Luxury Pattern_simple_compose_01k0c60kwafcgs9xcf1jyc9yme.png')",
-      }}
-      data-ai-hint="luxury pattern"
-    >
-      <div className="absolute inset-0 bg-background/80 backdrop-blur-sm" />
-      <div className="relative z-10 container mx-auto px-4">
-        <div className="mx-auto max-w-3xl text-center">
-          <Image
-            src="/images/Credit/logo.png"
-            alt="Oreginald Credit Partners Logo"
-            width={200}
-            height={200}
-            className="mx-auto"
-          />
-          <h1 className="mt-4 font-headline text-4xl font-bold tracking-tighter sm:text-5xl">
-            Oreginald Credit
-          </h1>
-          <p className="mt-4 text-muted-foreground md:text-xl">
-            A fully modern SaaS credit repair platform offering both DIY and DFY
-            (Done For You) services.
-          </p>
-        </div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
-          <FeatureCard
-            icon={<IconUploadCenter />}
-            title="Upload Center"
-            description="Easily upload your credit reports to get started."
-          />
-          <FeatureCard
-            icon={<IconLetterHistory />}
-            title="Letter History"
-            description="Track the status of your dispute letters and monitor progress."
-          />
-          <FeatureCard
-            icon={<IconPricingPlans />}
-            title="Pricing Plans"
-            description="Choose a plan that fits your needs, from DIY to full-service."
-          />
-          <FeatureCard
-            icon={<IconDisputeGeneration />}
-            title="Dispute Generation"
-            description="GPT-powered Metro2 dispute letter generation."
-          />
-        </div>
-
-        <div className="mt-12 text-center">
-          <Button size="lg" asChild>
-            <Link href="/credit-repair/signup">Get Started</Link>
-          </Button>
+    <>
+      {/* Hero Section */}
+      <div
+        className="relative bg-cover bg-center bg-no-repeat py-20"
+        style={{
+          backgroundImage:
+            "url('/images/20250717_0536_Urban-Tech Luxury Pattern_simple_compose_01k0c60kwafcgs9xcf1jyc9yme.png')",
+        }}
+        data-ai-hint="luxury pattern"
+      >
+        <div className="absolute inset-0 bg-background/80 backdrop-blur-sm" />
+        <div className="relative z-10 container mx-auto px-4">
+          <div className="mx-auto max-w-3xl text-center">
+            <Image
+              src="/images/Credit/logo.png"
+              alt="Oreginald Credit Partners Logo"
+              width={200}
+              height={200}
+              className="mx-auto"
+            />
+            <h1 className="mt-4 font-headline text-4xl font-bold tracking-tighter sm:text-5xl">
+              Oreginald Credit
+            </h1>
+            <p className="mt-4 text-muted-foreground md:text-xl">
+              A fully modern SaaS credit repair platform offering both DIY and DFY
+              (Done For You) services.
+            </p>
+            <div className="mt-8">
+              <Button size="lg" asChild>
+                <Link href="/credit-repair/signup">Get Started For Free</Link>
+              </Button>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  );
-}
 
-function FeatureCard({
-  icon,
-  title,
-  description,
-}: {
-  icon: React.ReactNode;
-  title: string;
-  description: string;
-}) {
-  return (
-    <Card className="text-center bg-background/80">
-      <CardHeader>
-        <div className="mx-auto w-fit">
-          {icon}
+      {/* How It Works Section */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl">How It Works</h2>
+            <p className="mt-4 max-w-2xl mx-auto text-muted-foreground md:text-xl">
+              A simple, transparent process to improve your credit score.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+            <div className="flex flex-col items-center">
+              <div className="p-4 bg-primary/10 rounded-full mb-4">
+                <UploadCloud className="h-10 w-10 text-primary" />
+              </div>
+              <h3 className="font-headline text-xl font-bold">1. Upload Report</h3>
+              <p className="text-muted-foreground mt-2">Securely upload your credit report from any bureau.</p>
+            </div>
+            <div className="flex flex-col items-center">
+              <div className="p-4 bg-primary/10 rounded-full mb-4">
+                <FileScan className="h-10 w-10 text-primary" />
+              </div>
+              <h3 className="font-headline text-xl font-bold">2. Analyze & Identify</h3>
+              <p className="text-muted-foreground mt-2">Our AI analyzes your report for errors and negative items.</p>
+            </div>
+            <div className="flex flex-col items-center">
+              <div className="p-4 bg-primary/10 rounded-full mb-4">
+                <Mail className="h-10 w-10 text-primary" />
+              </div>
+              <h3 className="font-headline text-xl font-bold">3. Dispute & Track</h3>
+              <p className="text-muted-foreground mt-2">Generate and send dispute letters, then track their status.</p>
+            </div>
+          </div>
         </div>
-        <CardTitle>{title}</CardTitle>
-      </CardHeader>
-      <CardContent>
-        <CardDescription>{description}</CardDescription>
-      </CardContent>
-    </Card>
+      </section>
+
+      {/* Pricing Plans Section */}
+      <section className="py-20 bg-muted/20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl">Choose Your Plan</h2>
+            <p className="mt-4 max-w-2xl mx-auto text-muted-foreground md:text-xl">
+              Whether you want to do it yourself or have us handle everything, we have a plan for you.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <Card className="flex flex-col">
+              <CardHeader>
+                <CardTitle className="font-headline text-2xl">DIY Plan</CardTitle>
+                <CardDescription>For the hands-on individual.</CardDescription>
+              </CardHeader>
+              <CardContent className="flex-grow space-y-4">
+                <p className="text-4xl font-bold">$49<span className="text-lg font-normal text-muted-foreground">/mo</span></p>
+                <ul className="space-y-2 text-muted-foreground">
+                  <li className="flex items-center"><CheckCircle className="h-5 w-5 text-green-500 mr-2" /> AI-Powered Report Analysis</li>
+                  <li className="flex items-center"><CheckCircle className="h-5 w-5 text-green-500 mr-2" /> Unlimited Dispute Letters</li>
+                  <li className="flex items-center"><CheckCircle className="h-5 w-5 text-green-500 mr-2" /> Letter Tracking Dashboard</li>
+                  <li className="flex items-center"><CheckCircle className="h-5 w-5 text-green-500 mr-2" /> Community Support</li>
+                </ul>
+              </CardContent>
+              <CardFooter>
+                <Button className="w-full" asChild>
+                  <Link href="/credit-repair/signup?plan=diy">Get Started</Link>
+                </Button>
+              </CardFooter>
+            </Card>
+            <Card className="border-primary border-2 flex flex-col relative overflow-hidden">
+               <div className="absolute top-0 right-0 bg-primary text-primary-foreground text-xs font-bold px-3 py-1 rounded-bl-lg">Most Popular</div>
+              <CardHeader>
+                <CardTitle className="font-headline text-2xl">DFY (Done For You) Plan</CardTitle>
+                <CardDescription>Let our experts handle it all.</CardDescription>
+              </CardHeader>
+              <CardContent className="flex-grow space-y-4">
+                <p className="text-4xl font-bold">$99<span className="text-lg font-normal text-muted-foreground">/mo</span></p>
+                 <ul className="space-y-2 text-muted-foreground">
+                  <li className="flex items-center"><CheckCircle className="h-5 w-5 text-green-500 mr-2" /> Everything in DIY Plan</li>
+                  <li className="flex items-center"><CheckCircle className="h-5 w-5 text-green-500 mr-2" /> Dedicated Credit Expert</li>
+                  <li className="flex items-center"><CheckCircle className="h-5 w-5 text-green-500 mr-2" /> Bureau Communication</li>
+                  <li className="flex items-center"><CheckCircle className="h-5 w-5 text-green-500 mr-2" /> Monthly Progress Calls</li>
+                </ul>
+              </CardContent>
+              <CardFooter>
+                <Button className="w-full" variant="default" asChild>
+                   <Link href="/credit-repair/signup?plan=dfy">Get Started</Link>
+                </Button>
+              </CardFooter>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl">What Our Clients Say</h2>
+            <p className="mt-4 max-w-2xl mx-auto text-muted-foreground md:text-xl">
+              Real results from real people.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <Card>
+              <CardContent className="pt-6">
+                <p className="text-muted-foreground">"Oreginald Credit helped me remove three negative items from my report in just two months. My score jumped 60 points!"</p>
+              </CardContent>
+              <CardFooter className="flex items-center gap-4">
+                <Avatar>
+                  <AvatarImage src="https://placehold.co/40x40.png" data-ai-hint="person" />
+                  <AvatarFallback>JD</AvatarFallback>
+                </Avatar>
+                <div>
+                  <p className="font-semibold">Jane Doe</p>
+                  <p className="text-sm text-muted-foreground">Los Angeles, CA</p>
+                </div>
+              </CardFooter>
+            </Card>
+            <Card>
+              <CardContent className="pt-6">
+                <p className="text-muted-foreground">"The DIY plan was perfect for me. The AI tools made it so easy to find errors I never would have caught on my own."</p>
+              </CardContent>
+              <CardFooter className="flex items-center gap-4">
+                <Avatar>
+                  <AvatarImage src="https://placehold.co/40x40.png" data-ai-hint="person" />
+                  <AvatarFallback>MS</AvatarFallback>
+                </Avatar>
+                <div>
+                  <p className="font-semibold">Michael Smith</p>
+                  <p className="text-sm text-muted-foreground">Houston, TX</p>
+                </div>
+              </CardFooter>
+            </Card>
+            <Card>
+              <CardContent className="pt-6">
+                <p className="text-muted-foreground">"The DFY service was worth every penny. It saved me so much time and stress. Highly recommend!"</p>
+              </CardContent>
+              <CardFooter className="flex items-center gap-4">
+                <Avatar>
+                  <AvatarImage src="https://placehold.co/40x40.png" data-ai-hint="person" />
+                  <AvatarFallback>AS</AvatarFallback>
+                </Avatar>
+                <div>
+                  <p className="font-semibold">Amanda Starr</p>
+                  <p className="text-sm text-muted-foreground">Miami, FL</p>
+                </div>
+              </CardFooter>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Embedded Chatbot Section */}
+      <section className="py-20 bg-muted/20">
+        <div className="container mx-auto px-4">
+          <div className="mx-auto max-w-3xl text-center">
+            <MessageSquare className="mx-auto h-12 w-12 text-primary" />
+            <h2 className="mt-4 font-headline text-3xl font-bold tracking-tighter sm:text-4xl">Have Questions?</h2>
+            <p className="mt-4 text-muted-foreground md:text-xl">
+              Our specialized credit repair chatbot is here to help. Ask anything about our services, the credit repair process, or get a personalized recommendation.
+            </p>
+            <div id="chatbot-credit" className="mt-8 mx-auto w-full max-w-lg h-96 bg-background rounded-lg shadow-lg border">
+                {/* Chatbot will be embedded here */}
+                <div className="flex items-center justify-center h-full text-muted-foreground">
+                    Chatbot coming soon...
+                </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
   );
 }
