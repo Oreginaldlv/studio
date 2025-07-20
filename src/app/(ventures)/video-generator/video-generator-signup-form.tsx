@@ -1,4 +1,3 @@
-
 'use client';
 
 import { useState } from 'react';
@@ -25,18 +24,24 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/com
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
 import { ScrollArea } from '@/components/ui/scroll-area';
 
+// ✅ Schema
 const formSchema = z.object({
   videoIdea: z.string().min(10, {
     message: 'Please describe your video idea in at least 10 characters.',
   }),
 });
 
+// ✅ Props interface
 interface VideoGeneratorSignupFormProps {
   open: boolean;
   onOpenChange?: (open: boolean) => void;
 }
 
-export function VideoGeneratorSignupForm({ open, onOpenChange }: VideoGeneratorSignupFormProps) {
+// ✅ Component
+export function VideoGeneratorSignupForm({
+  open,
+  onOpenChange,
+}: VideoGeneratorSignupFormProps) {
   const [isLoading, setIsLoading] = useState(false);
   const [script, setScript] = useState('');
   const { toast } = useToast();
@@ -48,7 +53,8 @@ export function VideoGeneratorSignupForm({ open, onOpenChange }: VideoGeneratorS
     },
   });
 
-  async function onSubmit(values: z.infer<typeof formSchema>) {
+  // ✅ Submit logic
+  const onSubmit = async (values: z.infer<typeof formSchema>) => {
     setIsLoading(true);
     setScript('');
     try {
@@ -67,20 +73,20 @@ export function VideoGeneratorSignupForm({ open, onOpenChange }: VideoGeneratorS
     } finally {
       setIsLoading(false);
     }
-  }
+  };
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="sm:max-w-3xl">
         <DialogHeader>
           <DialogTitle className="font-headline text-2xl">Generate Your Video Script</DialogTitle>
-           <DialogDescription>
+          <DialogDescription>
             Enter an idea, and we'll handle the script. Voiceover and visuals coming soon.
           </DialogDescription>
         </DialogHeader>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-h-[70vh]">
           <ScrollArea>
-             <div className="pr-4">
+            <div className="pr-4">
               <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
                   <FormField
@@ -117,7 +123,7 @@ export function VideoGeneratorSignupForm({ open, onOpenChange }: VideoGeneratorS
               </Form>
             </div>
           </ScrollArea>
-           <ScrollArea>
+          <ScrollArea>
             <div className="pr-4">
               {script ? (
                 <Card className="shadow-lg animate-in fade-in-50 slide-in-from-bottom-5 duration-500">
