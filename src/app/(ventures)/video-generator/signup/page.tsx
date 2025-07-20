@@ -1,3 +1,4 @@
+'use client';
 
 import { Film } from 'lucide-react';
 import { VideoGeneratorSignupForm } from '../video-generator-signup-form';
@@ -15,7 +16,7 @@ export default function VideoGeneratorSignupPage() {
         </p>
       </div>
       <div className="mx-auto mt-12 max-w-4xl">
-        <VideoGeneratorSignupForm onSubmit={() => {}} />
+        <VideoGeneratorSignupForm open={true} onOpenChange={() => {}} />
       </div>
     </div>
   );
