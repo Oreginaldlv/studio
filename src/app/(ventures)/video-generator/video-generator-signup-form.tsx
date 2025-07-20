@@ -4,10 +4,12 @@ import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
+
 import {
   generateVideoScript,
   GenerateVideoScriptInput,
 } from '@/ai/flows/generate-video-script';
+
 import { Button } from '@/components/ui/button';
 import {
   Form,
@@ -20,18 +22,29 @@ import {
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
 import { Loader2, Wand2 } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card';
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+} from '@/components/ui/dialog';
 import { ScrollArea } from '@/components/ui/scroll-area';
 
-// ✅ Schema
+// ✅ Form schema
 const formSchema = z.object({
   videoIdea: z.string().min(10, {
     message: 'Please describe your video idea in at least 10 characters.',
   }),
 });
 
-// ✅ Props interface
+// ✅ Component props
 interface VideoGeneratorSignupFormProps {
   open: boolean;
   onOpenChange?: (open: boolean) => void;
@@ -53,7 +66,6 @@ export function VideoGeneratorSignupForm({
     },
   });
 
-  // ✅ Submit logic
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     setIsLoading(true);
     setScript('');
@@ -68,7 +80,8 @@ export function VideoGeneratorSignupForm({
       toast({
         variant: 'destructive',
         title: 'Error',
-        description: 'There was an issue generating your script. Please try again.',
+        description:
+          'There was an issue generating your script. Please try again.',
       });
     } finally {
       setIsLoading(false);
@@ -79,16 +92,22 @@ export function VideoGeneratorSignupForm({
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="sm:max-w-3xl">
         <DialogHeader>
-          <DialogTitle className="font-headline text-2xl">Generate Your Video Script</DialogTitle>
+          <DialogTitle className="font-headline text-2xl">
+            Generate Your Video Script
+          </DialogTitle>
           <DialogDescription>
             Enter an idea, and we'll handle the script. Voiceover and visuals coming soon.
           </DialogDescription>
         </DialogHeader>
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-h-[70vh]">
           <ScrollArea>
             <div className="pr-4">
               <Form {...form}>
-                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+                <form
+                  onSubmit={form.handleSubmit(onSubmit)}
+                  className="space-y-8"
+                >
                   <FormField
                     control={form.control}
                     name="videoIdea"
@@ -123,6 +142,7 @@ export function VideoGeneratorSignupForm({
               </Form>
             </div>
           </ScrollArea>
+
           <ScrollArea>
             <div className="pr-4">
               {script ? (
