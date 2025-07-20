@@ -15,7 +15,7 @@ export default function VideoGeneratorSignupPage() {
         </p>
       </div>
       <div className="mx-auto mt-12 max-w-4xl">
-        <VideoGeneratorSignupForm />
+        <VideoGeneratorSignupForm onSubmit={() => {}} />
       </div>
     </div>
   );
