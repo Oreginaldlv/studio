@@ -1,7 +1,10 @@
 'use client';
 
+import dynamic from 'next/dynamic';
 import { CreditCard } from 'lucide-react';
-import { LoginForm } from './login-form';
+
+// Lazy load the LoginForm only on the client (avoids pre-render error)
+const LoginForm = dynamic(() => import('./login-form').then(mod => mod.LoginForm), { ssr: false });
 
 export default function CreditRepairLoginPage() {
   return (
@@ -21,4 +24,3 @@ export default function CreditRepairLoginPage() {
     </div>
   );
 }
-
